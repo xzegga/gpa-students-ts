@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "test",
+    "install:client": "cd client && npm install",
+    "postinstall": "npm run install:client",
     "client": "cd client && npm start --open",
     "start": "concurrently -n 'Server,React' \"nodemon server.js\" \"npm run client\""
   },
