@@ -1,0 +1,33 @@
+{
+  "name": "gpa-students-ts",
+  "version": "1.0.0",
+  "description": "Calculate Overal GPA Student App with React.JS and Node.JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "client": "cd client && npm start --open",
+    "start": "concurrently -n 'Server,React' \"nodemon server.js\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzegga/gpa-students-ts.git"
+  },
+  "keywords": [
+    "nodejs",
+    "reactjs",
+    "gpa"
+  ],
+  "author": "Raúl Escamilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xzegga/gpa-students-ts/issues"
+  },
+  "homepage": "https://github.com/xzegga/gpa-students-ts#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.7",
+    "sqlite3": "^5.0.2"
+  }
+}
