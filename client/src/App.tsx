@@ -1,9 +1,11 @@
-import Students from './features/students/Students';
+import StudentAdd from 'features/students/StudentAdd';
+import StudentList from 'features/students/StudentList';
 
 function App() {
   return (
     <div className="App">
-      <Students />
+      <StudentAdd />
+      <StudentList />
     </div>
   );
 }

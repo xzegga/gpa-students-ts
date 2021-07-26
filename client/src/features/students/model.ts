@@ -6,11 +6,18 @@ export interface Course {
 }
 
 export interface Student {
-  id: string;
+  id?: string;
   name: string;
   email: string;
+}
+
+export interface StucentGrades extends Student {
   courses: Course[],
   gpa: number;
+}
+
+export interface StudentResponse {
+  students: StucentGrades[]
 }
 
 export enum STATUS {
@@ -20,6 +27,7 @@ export enum STATUS {
 }
 
 export interface StudentState {
-  summary: Student[];
+  summary: StucentGrades[];
   status:  STATUS.idle | STATUS.loading | STATUS.failed;
+  error: string;
 }

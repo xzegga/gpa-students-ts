@@ -1,7 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import studentReducer from '../features/students/slices'
 
-
 export const store = configureStore({
   reducer: {
     students: studentReducer,
