@@ -5,7 +5,7 @@ This project is divided into a NodeJs server and a React application
 
 ## Available Scripts
 
-Install dependencies for both project with"
+Install dependencies for both project with
 
 ### `npm install`
 
