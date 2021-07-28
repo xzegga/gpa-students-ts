@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow } from 'material-ui';
 import { Course } from '../model';
 import { useStyles } from '../styles';

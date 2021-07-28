@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   IconButton, FirstPageIcon, KeyboardArrowLeft, KeyboardArrowRight,
   LastPageIcon, makeStyles, createStyles, Theme

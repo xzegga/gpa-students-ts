@@ -92,8 +92,6 @@ function AddStudent() {
 
   return (
     <Container className={classes.addCourse}>
-
-
       <Box textAlign="right">
         <Button startIcon={<PersonAddIcon />} variant="outlined" color="primary" onClick={handleClickOpen} className={classes.add}>
           Add New Student

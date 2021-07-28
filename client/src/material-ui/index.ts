@@ -49,9 +49,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import SearchBar from "material-ui-search-bar";
-
-
-
+import { Transition } from 'react-transition-group';
+import Fade from '@material-ui/core/Fade';
 
 export {
   // Core Exports
@@ -72,6 +71,8 @@ export {
   createStyles,
   TableFooter,
   TablePagination,
+  Fade,
+  Transition,
 
   // Forms
   FormControl,
@@ -105,7 +106,7 @@ export {
   PersonAddIcon,
   CollectionsBookmarkOutlinedIcon,
 
-  SearchBar
+  SearchBar,
 };
 
 export type { WithStyles };

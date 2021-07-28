@@ -1,0 +1,11 @@
+.body-footer {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em 1em 0;
+  background-color: #D9F7FA;
+  max-width: 56.5em;
+  font-family: "Barlow";
+  padding: 30px;
+  margin-bottom: 30px;
+}
