@@ -30,6 +30,8 @@ export const useStyles = makeStyles({
   },
   tableContainer: {
     padding: 15,
+    width: '100',
+    overflowX: 'auto'
   },
   header: {
     padding: 15,
