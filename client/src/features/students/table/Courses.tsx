@@ -1,7 +1,7 @@
 import React from 'react'
-import { Table, TableBody, TableCell, TableHead, TableRow } from 'material';
+import { Table, TableBody, TableCell, TableHead, TableRow } from 'material-ui';
 import { Course } from '../model';
-import { useStyles } from './styles';
+import { useStyles } from '../styles';
 
 export interface IProps {
   courses: Course[]

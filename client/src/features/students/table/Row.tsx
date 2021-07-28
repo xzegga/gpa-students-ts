@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StucentGrades } from '../model';
+import { StudentList } from '../model';
 import Panel from './Panel';
 import {
   IconButton, TableCell, TableRow,
@@ -9,12 +9,12 @@ import {
   SentimentSatisfiedIcon,
   SentimentSatisfiedAltIcon,
   SentimentVerySatisfiedIcon,
-} from 'material';
-import { useRowStyles } from './styles';
+} from 'material-ui';
+import { useRowStyles } from '../styles';
 
 
 interface IProps {
-  student: StucentGrades
+  student: StudentList
 }
 
 const Row: React.FC<IProps> = ({ student }) => {
@@ -22,7 +22,6 @@ const Row: React.FC<IProps> = ({ student }) => {
   const [open, setOpen] = useState(false);
   const classes = useRowStyles();
   let icon;
-
 
   if (student.gpa >= 4) {
     icon = <SentimentVerySatisfiedIcon />
@@ -52,18 +51,18 @@ const Row: React.FC<IProps> = ({ student }) => {
             student.courses.length > 0 ? (
               <Chip
                 icon={icon}
-                label={student.gpa}
+                label={student.gpa.toFixed(2)}
                 variant="outlined"
                 className={classes.chip}
               />
-            ) : 'N/A'
+            ) : 'N/A' 
           }
 
         </TableCell>
       </TableRow>
       <TableRow>
         <TableCell className={classes.panelRow} colSpan={6}>
-          <Panel open={open} courses={student.courses} />
+          <Panel open={open} courses={student.courses} student={student} />
         </TableCell>
       </TableRow>
     </React.Fragment >

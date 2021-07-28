@@ -11,30 +11,33 @@ router.get('', async (req, res) => {
 /* Courses */
 router.post('/courses', async (req, res) => {
   const results = await db.courses.create(req.body)
-  res.status(201).json({ id: results[0] })
+  const [id] = results
+  res.status(201).json({ id })
 });
 
 router.get('/courses', async (req, res) => {
-  const results = await db.courses.find()
-  res.status(201).json({ results })
+  const courses = await db.courses.find()
+  res.status(201).json({ courses })
 });
 
 /* Grades */
 router.post('/grades', async (req, res) => {
-  const results = await db.grades.create(req.body)
-  res.status(201).json({ message: 'Grade created' })
+  const grade = await db.grades.create(req.body)
+  const [id] = grade
+  res.status(201).json({ id })
 });
 
 router.get('/grades', async (req, res) => {
-  const results = await db.grades.find()
-  res.status(201).json({ results })
+  const grades = await db.grades.find()
+  res.status(200).json({ grades })
 });
 
 
 /* Students */
 router.post('/students', async (req, res) => {
   const results = await db.students.create(req.body)
-  res.status(201).json({ id: results[0] })
+  const [id] = results
+  res.status(201).json({ id })
 });
 
 router.get('/students', async (req, res) => {

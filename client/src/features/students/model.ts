@@ -1,23 +1,38 @@
-export interface Course {
-  id: number;
+export interface Commons {
+  id?: number;
   name: string;
+}
+
+export interface Grade {
+  id: number;
   score: number;
   letter: string;
 }
 
-export interface Student {
-  id?: string;
-  name: string;
+export interface Course extends Commons {
+  score: number;
+  letter: string;
+}
+
+export interface Student extends Commons {
   email: string;
 }
 
-export interface StucentGrades extends Student {
+export interface StudentCourse extends Commons {
+  grade: number,
+  student: number;
+}
+
+export interface StudentList extends Student {
   courses: Course[],
   gpa: number;
 }
 
 export interface StudentResponse {
-  students: StucentGrades[]
+  students: StudentList[]
+}
+export interface GradesResponse {
+  grades: Grade[]
 }
 
 export enum STATUS {
@@ -27,7 +42,8 @@ export enum STATUS {
 }
 
 export interface StudentState {
-  summary: StucentGrades[];
+  summary: StudentList[];
   status:  STATUS.idle | STATUS.loading | STATUS.failed;
   error: string;
+  grades: Grade[];
 }

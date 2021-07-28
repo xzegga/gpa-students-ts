@@ -1,5 +1,5 @@
 const path = require('path')
-console.log( path.join(__dirname, '../data/gpa.sqlite3'))
+
 module.exports = {
   development: {
     client: 'sqlite3',
